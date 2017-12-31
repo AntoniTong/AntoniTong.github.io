@@ -44,7 +44,7 @@
                     </h1>
                     <h2 class="headline">
                     Sep 28, 2014 00:00
-                    · 296 words
+                    · 245 words
                     · 2 minute read
                       <span class="tags">
                       
@@ -78,10 +78,16 @@ title: Water Cooler Talk on Optimization: LP, QP, SQP, DP, &hellip;
 description: This post summarizes some of the basics of optimization
 weight: 10</p>
 
-<p><script type="text/javascript" async
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async
+  src="https://example.com/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+
+<script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
-processEnvironments: true</p>
 
 <h3 id="introduction"><strong>Introduction</strong></h3>
 
@@ -105,33 +111,14 @@ processEnvironments: true</p>
 <li>Develop a demand response scheme, that</li>
 </ul>
 
-<p>\begin{align}
-&amp; \underset{X}{\text{minimize}}
-&amp; &amp; \mathrm{trace}(X) <br />
+<p>The basic form of optimization problem cam be summarized as the following equations:</p>
+
+<p>\begin{aligned}
+&amp; \underset{x}{\text{minimize}}
+&amp; &amp; f_0(x) \newline
 &amp; \text{subject to}
-&amp; &amp; X<em>{ij} = M</em>{ij}, \; (i,j) \in \Omega, <br />
-&amp;&amp;&amp; X \succeq 0.
-\end{align}</p>
-
-<p>\begin{align}
-    \shortintertext{Minimize}<br />
-    \MoveEqLeft[3]\sum\nolimits<em>{\tau=t}^{t+T-1}s(\tau)[V\beta(\tau)-Q(\tau)-X(\tau)-Y(\tau)] \nonumber <br />
-    +{}&amp;\sum\nolimits</em>{\tau=t}^{t+T-1}[(X(\tau)+Y(\tau))(\gamma b(\tau)-\gamma v(\tau))]\label{green}<br />
-    \shortintertext{subject to}
-    &amp;0\leq s(\tau)\leq s<em>\text{max}, \quad \forall \tau \<br />
-    &amp;\sum\nolimits</em>{\tau=t}^{t+T-1} \gamma \beta(\tau)\leq N_\text{max}
-\end{align}</p>
-
-<p>\begin{align}
-\dot{x} &amp; = \sigma(y-x) <br />
-\dot{y} &amp; = \rho x - y - xz <br />
-\dot{z} &amp; = -\beta z + xy
-\end{align}</p>
-
-<p>$ \underset{X}{\text{minimize}}  \ \ \   f_0(x)  <br />
-\text{subject to} f_i(x) \leq b_i, \; i = 1, \ldots, m.$</p>
-
-<p>$$ \alpha = \beta $$</p>
+&amp; &amp; f_i(x) \leq b_i, \; i = 1, \ldots, m.
+\end{aligned}</p>
                 </section>
             </article>
 
