@@ -11,5 +11,45 @@
 	<atom:link href="https://antonitong.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>Creating a New Theme</title>
+      <link>https://antonitong.github.io/posts/creating-a-new-theme/</link>
+      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://antonitong.github.io/posts/creating-a-new-theme/</guid>
+      <description>&lt;h3 id=&#34;introduction&#34;&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;This tutorial will show you how to create a simple theme in Hugo.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Basics of Optimization LP, QP, SQP, DP and When to Use Them</title>
+      <link>https://antonitong.github.io/posts/water-cooler-talk-on-optimization/</link>
+      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://antonitong.github.io/posts/water-cooler-talk-on-optimization/</guid>
+      <description>&lt;p&gt;author: &amp;ldquo;Antonio Tong&amp;rdquo;
+date: 2017-12-30
+linktitle: Water Cooler Talk on Optimization: LP, QP, SQP, DP, &amp;hellip;
+menu:
+  main:
+title: Water Cooler Talk on Optimization: LP, QP, SQP, DP, &amp;hellip;
+description: This post summarizes some of the basics of optimization
+weight: 10&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&#34;text/javascript&#34; async
+  src=&#34;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML&#34;&gt;
+&lt;/script&gt;
+processEnvironments: true&lt;/p&gt;
+
+&lt;h3 id=&#34;introduction&#34;&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;Optimization is a programmic process to minimize or maximize a deifned &lt;strong&gt;objective function&lt;/strong&gt; by tuning the &lt;strong&gt;deisgn variables&lt;/strong&gt; bounded by a set of &lt;strong&gt;constraints&lt;/strong&gt;. In the field of energy engineering, many problems can be discribed as an optimization problem:&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
   </channel>
 </rss>

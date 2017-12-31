@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<meta name="author" content="Antoni Tong">
+		<meta name="description" content="Site Description">
+		<meta name="generator" content="Hugo 0.31.1" />
+		<title>Basics of Optimization LP, QP, SQP, DP and When to Use Them &middot; Antoni Tong</title>
+		<link rel="shortcut icon" href="https://antonitong.github.io/images/favicon.ico">
+		<link rel="stylesheet" href="https://antonitong.github.io/css/style.css">
+		<link rel="stylesheet" href="https://antonitong.github.io/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="https://antonitong.github.io/css/font-awesome.min.css">
+		
+
+		
+		<link href="https://antonitong.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Antoni Tong" />
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='https://antonitong.github.io/'> <span class="arrow">←</span>Home</a>
+	
+	<a href='https://antonitong.github.io/about'>About</a>
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        Basics of Optimization LP, QP, SQP, DP and When to Use Them
+                    </h1>
+                    <h2 class="headline">
+                    Sep 28, 2014 00:00
+                    · 299 words
+                    · 2 minute read
+                      <span class="tags">
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                  
+                    <div id="toc">
+                      <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#introduction"><strong>Introduction</strong></a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+                    </div>
+                  
+                
+                <section id="post-body">
+                    <p>author: &ldquo;Antonio Tong&rdquo;
+date: 2017-12-30
+linktitle: Water Cooler Talk on Optimization: LP, QP, SQP, DP, &hellip;
+menu:
+  main:
+title: Water Cooler Talk on Optimization: LP, QP, SQP, DP, &hellip;
+description: This post summarizes some of the basics of optimization
+weight: 10</p>
+
+<p><script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+processEnvironments: true</p>
+
+<h3 id="introduction"><strong>Introduction</strong></h3>
+
+<p>Optimization is a programmic process to minimize or maximize a deifned <strong>objective function</strong> by tuning the <strong>deisgn variables</strong> bounded by a set of <strong>constraints</strong>. In the field of energy engineering, many problems can be discribed as an optimization problem:</p>
+
+<p></p>
+
+<ul>
+<li>Design its generation portoforlio for a powerplant that maximizes its revenue in the energy market.</li>
+<li>Design the mixture of distributed energy sources plus storage systems in a micro-grid to minimized the payback term, and perhapse meet the green house gas emmission quota.</li>
+<li>Control the charging and discharging sequences of a battery system, to minimize the energy cost.</li>
+<li>Design a tracker to maximize the energy output from solar panels</li>
+<li>Design an electric vechile charging scheme that aviods surplus charges during peak time.</li>
+</ul>
+
+<p>Yet, many problems are a little more complex to define:</p>
+
+<ul>
+<li>Deisgn a battery management system that prolong its cycle life.</li>
+<li>Pick the next site of an energy storage system deployment that brings the most benefit to the grid.</li>
+<li>Develop a demand response scheme, that</li>
+</ul>
+
+<p>\begin{subequation}
+\begin{align}
+&amp; \underset{X}{\text{minimize}}
+&amp; &amp; \mathrm{trace}(X) <br />
+&amp; \text{subject to}
+&amp; &amp; X<em>{ij} = M</em>{ij}, \; (i,j) \in \Omega, <br />
+&amp;&amp;&amp; X \succeq 0.
+\end{align}
+\end{subequation}</p>
+
+<p>\begin{align}
+    \shortintertext{Minimize}<br />
+    \MoveEqLeft[3]\sum\nolimits<em>{\tau=t}^{t+T-1}s(\tau)[V\beta(\tau)-Q(\tau)-X(\tau)-Y(\tau)] \nonumber <br />
+    +{}&amp;\sum\nolimits</em>{\tau=t}^{t+T-1}[(X(\tau)+Y(\tau))(\gamma b(\tau)-\gamma v(\tau))]\label{green}<br />
+    \shortintertext{subject to}
+    &amp;0\leq s(\tau)\leq s<em>\text{max}, \quad \forall \tau \<br />
+    &amp;\sum\nolimits</em>{\tau=t}^{t+T-1} \gamma \beta(\tau)\leq N_\text{max}
+\end{align}
+\blindtext</p>
+
+<p>\begin{align}
+\dot{x} &amp; = \sigma(y-x) <br />
+\dot{y} &amp; = \rho x - y - xz <br />
+\dot{z} &amp; = -\beta z + xy
+\end{align}</p>
+
+<p>$ \underset{X}{\text{minimize}}  \ \ \   f_0(x)  <br />
+\text{subject to} f_i(x) \leq b_i, \; i = 1, \ldots, m.$</p>
+
+<p>$$ \alpha = \beta $$</p>
+                </section>
+            </article>
+
+            
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2fantonitong.github.io%2fposts%2fwater-cooler-talk-on-optimization%2f - Water-Cooler-Talk-on-Optimization by @your_twitter_id"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+            
+
+            
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'your_disqus_short_name'; 
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+            
+
+            
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.github.com/antonitong">
+        <i class="fa fa-github-square"></i>
+    </a>
+    
+    <a class="symbol" href="https://www.linkedin.com/in/antonitong">
+        <i class="fa fa-linkedin-square"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+       © Copyright 2017 <i class="fa fa-heart" aria-hidden="true"></i> Antoni Tong
+    
+    </p>
+</footer>
+
+        </section>
+
+        <script src="https://antonitong.github.io/js/jquery-2.2.4.min.js"></script>
+<script src="https://antonitong.github.io/js/main.js"></script>
+<script src="https://antonitong.github.io/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'your_google_analytics_id', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+
+
+
+    </body>
+</html>
